@@ -1,6 +1,25 @@
-$color: rgb(141, 99, 99);
+@import 'variaveis';
 
+@font-face {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    src: url('../fonts/Lato-Regular.ttf');
 
-body{
-    background-color: $color;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    src: url('../fonts/Lato-Bold.ttf');
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $corBg;
+    color: #FFF
+}
+
+@import 'header';
+@import 'serie-banner'
