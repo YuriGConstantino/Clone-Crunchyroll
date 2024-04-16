@@ -18,8 +18,34 @@
 
 body {
     background-color: $corBg;
-    color: #FFF
+    color: #FFF;
+    font-family: "Lato", sans-serif;
+    
 }
 
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10
+}
+
+.text-big {
+    @include text(34px)
+}
+
+.text {
+    @include text
+}
+
+.text-small {
+    @include text(14px)
+}
+
+.text-tags {
+    @include text(12px)
+}
+
+
+
 @import 'header';
-@import 'serie-banner'
+@import 'banner';
+@import 'description';

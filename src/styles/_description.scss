@@ -1,0 +1,94 @@
+.description {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+
+    &__ratings {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: $corRatings;
+        margin: 20px 0;
+        
+        &::before {
+            content: url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Classind_A12.svg');
+            display: inline-block;
+            width: 16px;
+            
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            &::before {
+                content: '';
+                background-color: gray;
+                border-radius: 100%;
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+            }
+            
+        }
+
+    }
+
+    &__rate {
+        color: $corTextSecundaria;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        &-stars{
+            cursor: pointer;
+            display: inline-block;
+            button {
+                background: none;
+                background-image: url('/dist/images/star.svg');
+                border: none;
+                width: 24px;
+                height: 23px;
+                cursor: pointer;
+            }
+
+        }
+
+        span::before {
+            content: '|';
+            margin-right: 1rem;
+        }
+
+    }
+
+    &__text {
+        width: 660px;
+
+    }
+
+    &__next-ep {
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            background-color: $corPrincipal;
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border: none;
+            font-family: "Lato", sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+
+            &::before {
+                content: url('/dist/images/play.svg');
+            }
+        }
+    }
+}

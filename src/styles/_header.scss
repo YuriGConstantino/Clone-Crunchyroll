@@ -4,9 +4,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 5rem;
-    font-family: "Lato", sans-serif;
     z-index: 1;
     position: sticky;
+    color: $corTextSecundaria;
 
     &__logo {
         width: 8.5rem;
@@ -38,14 +38,18 @@
 
             &:nth-child(1) {
                 &::after {
-                    content: url('../images/chevron-down.svg');
+                    content: url('/dist/images/down-arrow-svgrepo-com.svg');
+                    width: 16px;
+                    margin-left: .8rem;
 
                 }
             }
 
             &:nth-child(3) {
                 &::after {
-                    content: url('../images/chevron-down.svg');
+                    content: url('/dist/images/down-arrow-svgrepo-com.svg');
+                    width: 16px;
+                    margin-left: .8rem;
                 }
             }
 
