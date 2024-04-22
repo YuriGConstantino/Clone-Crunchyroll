@@ -14,7 +14,13 @@ function images() {
     .pipe(gulp.dest('./dist/images'))
 }
 
-exports.default = gulp.parallel(styles, images)
+function icons() {
+    return gulp.src('./src/icons/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./dist/icons'))
+}
+
+exports.default = gulp.parallel(styles, images, icons)
 exports.watch = function() {
     gulp.watch('./src/styles/*.scss', gulp.parallel(styles))
 }

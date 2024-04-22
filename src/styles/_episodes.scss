@@ -1,0 +1,62 @@
+.episodes {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 2rem 0;
+    width: 60%;
+
+    &__season {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1075px;
+        font-size: 18px;
+
+        &-btn {
+            color: $corTextSegundaria;
+            background: transparent;
+            border: none;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+
+    &__lists {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin: 2rem 0;
+        cursor: pointer;
+
+        
+        &-card {
+            width: 22%;
+            
+            &-cover {
+                width: 100%;
+            }
+
+            &-serie {
+                color: $corTextSegundaria;
+            }
+
+            &:hover &-title {
+                text-decoration: underline;
+            }
+
+            &-language {
+                color: $corTextSegundaria;
+            }
+
+
+        }
+
+    }
+
+
+
+
+}

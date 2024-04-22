@@ -17,10 +17,16 @@
 }
 
 body {
-    background-color: $corBg;
+    background: linear-gradient(180deg, $corBg 90%, $corBgGradient 100%);
     color: #FFF;
     font-family: "Lato", sans-serif;
     
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @mixin text($fontSize: 16px) {
@@ -29,19 +35,23 @@ body {
 }
 
 .text-big {
-    @include text(34px)
+    @include text(34px);
+    font-family: "Lato", sans-serif;
 }
 
 .text {
-    @include text
+    @include text;
+    font-family: "Lato", sans-serif;
 }
 
 .text-small {
-    @include text(14px)
+    @include text(14px);
+    font-family: "Lato", sans-serif;
 }
 
-.text-tags {
-    @include text(12px)
+.text-little {
+    @include text(12px);
+    font-family: "Lato", sans-serif;
 }
 
 
@@ -49,3 +59,4 @@ body {
 @import 'header';
 @import 'banner';
 @import 'description';
+@import 'episodes'

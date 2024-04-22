@@ -3,16 +3,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 0 5rem;
-    z-index: 1;
-    position: sticky;
-    color: $corTextSecundaria;
+    z-index: 2;
+    position: fixed;
+    color: $corTextPrimaria;
 
     &__logo {
         width: 8.5rem;
         margin-right: 3rem;
         cursor: pointer;
-
+        
+        &:hover {
+            filter: brightness(0) saturate(100%) invert(99%) sepia(4%) saturate(440%) hue-rotate(338deg) brightness(118%) contrast(100%);
+        }
     }
 
     &__menu {
@@ -33,12 +37,12 @@
             cursor: pointer;
 
             &:hover {
-                background-color: $corHover;
+                background-color: $corHeader-hover;
             }
 
             &:nth-child(1) {
                 &::after {
-                    content: url('/dist/images/down-arrow-svgrepo-com.svg');
+                    content: url('/dist/icons/down-arrow-svgrepo-com.svg');
                     width: 16px;
                     margin-left: .8rem;
 
@@ -47,7 +51,7 @@
 
             &:nth-child(3) {
                 &::after {
-                    content: url('/dist/images/down-arrow-svgrepo-com.svg');
+                    content: url('/dist/icons/down-arrow-svgrepo-com.svg');
                     width: 16px;
                     margin-left: .8rem;
                 }
@@ -59,7 +63,7 @@
             padding: 1rem;
 
             &:hover {
-                background-color: $corHover;
+                background-color: $corHeader-hover;
             }
         }
 
@@ -70,11 +74,12 @@
             cursor: pointer;
 
             &:hover {
-                background-color: $corHover;
+                background-color: $corHeader-hover;
             }
 
             &::after {
-                content: url('../images/chevron-down.svg');
+                content: url('/dist/icons/down-arrow-svgrepo-com.svg');
+                margin-left: 0.3rem;
             }
         }
 

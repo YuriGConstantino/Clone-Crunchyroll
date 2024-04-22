@@ -1,27 +1,40 @@
 .description {
     display: flex;
-    width: 100%;
-    justify-content: center;
     margin-top: 2rem;
+    gap: 4rem;
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+
+
+        &-share {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
 
     &__ratings {
         display: flex;
         align-items: center;
         gap: 5px;
-        color: $corRatings;
+        color: $corTextSegundaria;
         margin: 20px 0;
-        
+
         &::before {
             content: url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Classind_A12.svg');
             display: inline-block;
             width: 16px;
-            
+
         }
 
         span {
             display: flex;
             align-items: center;
             gap: 5px;
+
             &::before {
                 content: '';
                 background-color: gray;
@@ -30,29 +43,35 @@
                 width: 5px;
                 height: 5px;
             }
-            
+
         }
 
     }
 
     &__rate {
-        color: $corTextSecundaria;
+        color: $corTextPrimaria;
         display: flex;
         align-items: center;
         gap: 10px;
-        
-        &-stars{
+
+        &-stars {
             cursor: pointer;
             display: inline-block;
+
             button {
                 background: none;
-                background-image: url('/dist/images/star.svg');
+                background-image: url('/dist/icons/star.svg');
                 border: none;
                 width: 24px;
                 height: 23px;
                 cursor: pointer;
             }
 
+        }
+
+        span:nth-child(2)::after {
+            content: url('/dist/icons/down-arrow-svgrepo-com.svg');
+            margin-left: 10px;
         }
 
         span::before {
@@ -67,11 +86,113 @@
 
     }
 
+    &__action {
+
+        &-buttons {
+            margin: 26px 0;
+            display: flex;
+            
+        }
+
+        &-queue,
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 0.3rem 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+
+        }
+
+        &-queue {
+            background: none;
+            border: solid 2px $corPrincipal;
+            color: $corPrincipal;
+
+
+            &::before {
+                content: url('/dist/icons/bookmark.svg');
+                filter: brightness(0) saturate(100%) invert(65%) sepia(56%) saturate(4894%) hue-rotate(347deg) brightness(99%) contrast(94%);
+                ;
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: $corPrincipal-select;
+                border-color: $corPrincipal-select;
+                filter: brightness(0) saturate(100%) invert(68%) sepia(89%) saturate(2471%) hue-rotate(336deg) brightness(104%) contrast(92%);
+            }
+
+        }
+
+        &-list {
+            border: none;
+            background: transparent;
+            color: $corTextSegundaria;
+
+
+            &::before {
+                content: url('/dist/icons/plus.svg');
+            }
+
+        }
+
+    }
+
+    &__tags {
+        margin: 1rem 0;
+
+        a {
+            background-color: $corTags;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $corTextPrimaria;
+            padding: 6px 8px;
+            margin: 0 5px;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #4a4e58;
+            padding: 10px 0;
+
+        }
+
+        &-language {
+            max-width: 60%;
+        }
+
+        &-ratings {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        &-btn {
+            color: $corTextSegundaria;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: transparent;
+            border: none;
+            margin: 1rem 0;
+            cursor: pointer;
+        }
+
+    }
+
+
     &__next-ep {
         padding-left: 2rem;
         display: flex;
         flex-direction: column;
-        
+
 
         &-btn {
             display: flex;
@@ -87,7 +208,7 @@
             text-transform: uppercase;
 
             &::before {
-                content: url('/dist/images/play.svg');
+                content: url('/dist/icons/play.svg');
             }
         }
     }
