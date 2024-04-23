@@ -1,0 +1,112 @@
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-top: 2rem;
+    
+    &__container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        border-bottom: 1px solid #4a4e58;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+
+    }
+
+    &__list {
+        list-style: none;
+        color: $corTextSegundaria;
+        margin-bottom: 1rem;
+
+        &-itens {
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                text-decoration: underline;
+                color: #fff;
+            }
+
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        color: $corTextSegundaria;
+
+        &-logo {
+            width: 158px;
+
+        }
+
+        &-btn {
+            background-color: transparent;
+            border: none;
+            color: $corTextSegundaria;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.4s;
+            padding: 1rem;
+
+            &::before {
+                content: url('/dist/icons/down-arrow-svgrepo-com.svg');
+                margin-right: 0.5rem;
+            }
+
+            &:hover {
+                background-color: #23252b;
+                color: #fff;
+
+                &::before {
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(23deg) brightness(118%) contrast(118%);
+                }
+            }
+        }
+
+    }
+
+}
+
+.contact {
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    padding-left: 1.5rem;
+
+    &:hover {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(23deg) brightness(118%) contrast(118%);
+    }
+
+
+    &:nth-child(1) {
+        background-image: url('/dist/icons/youtube-svgrepo-com.svg');
+
+    }
+
+    &:nth-child(2) {
+        background-image: url('/dist/icons/facebook.svg');
+    }
+
+    &:nth-child(3) {
+        background-image: url('/dist/icons/twitter.svg');
+    }
+
+    &:nth-child(4) {
+        background-image: url('/dist/icons/instagram.svg');
+    }
+
+    &:nth-child(5) {
+        background-image: url('/dist/icons/tiktok-svgrepo-com.svg');
+    }
+}
+

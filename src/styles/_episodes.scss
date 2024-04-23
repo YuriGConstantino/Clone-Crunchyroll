@@ -15,11 +15,33 @@
         font-size: 18px;
 
         &-btn {
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0.5rem 0;
             color: $corTextSegundaria;
             background: transparent;
             border: none;
             text-transform: uppercase;
             font-weight: 700;
+            cursor: pointer;
+            transition: 0.4s;
+
+            &::before {
+                content: url('/dist/icons/sort_FILL0_wght400_GRAD0_opsz24.svg');
+                filter: brightness(0) saturate(100%) invert(62%) sepia(10%) saturate(22%) hue-rotate(336deg) brightness(101%) contrast(93%);
+                margin-right: 0.5rem;
+                width: 24px;
+                transition: 0.4s;
+            }
+
+            &:hover {
+                background-color: #23252b;
+                color: #FFF;
+
+                &::before {
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(104deg) brightness(102%) contrast(105%);
+                }
+            }
         }
     }
 
@@ -31,10 +53,10 @@
         margin: 2rem 0;
         cursor: pointer;
 
-        
+
         &-card {
             width: 22%;
-            
+
             &-cover {
                 width: 100%;
             }
