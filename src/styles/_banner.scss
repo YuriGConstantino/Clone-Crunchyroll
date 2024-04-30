@@ -5,10 +5,38 @@
         width: 890px;
         left: 25%;
         z-index: 1;
+
+        @media screen and (max-width: 1024px) {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            left: 10%;
+            top: 6%;
+        }
     }
-    
+
     &__img {
         width: 100%;
+
+        @media screen and (max-width: 1024px) {
+            width: 83%;
+
+        }
+
+        @media screen and (max-width: 567px) {
+            display: none;
+        }
+
+        &-mobile {
+            display: block;
+            width: 81%;
+
+            @media screen and (min-width: 568px) {
+                display: none;
+            }
+
+        }
+
     }
 
     &::after {
@@ -23,5 +51,18 @@
         filter: blur(5px);
         position: relative;
         opacity: 0.6;
+
+        @media screen and (max-width: 1024px) {
+            height: 380px;
+        }
+
+        @media screen and (max-width: 768px) {
+            background-image: url('/dist/images/frieren-banner-mobile.jpg')
+        }
+
+        @media screen and (max-width: 567px) {
+            height: 604px;
+        }
+
     }
 }

@@ -9,6 +9,10 @@
     position: fixed;
     color: $corTextPrimaria;
 
+    @media screen and (max-width: 567px) {
+        padding: 0;
+    }
+
     &__logo {
         width: 8.5rem;
         margin-right: 3rem;
@@ -22,6 +26,10 @@
     &__menu {
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: 567px) {
+            display: none;
+        }
 
         &-container {
             display: flex;

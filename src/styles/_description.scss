@@ -1,7 +1,17 @@
 .description {
+    height: 275px;
     display: flex;
     margin-top: 2rem;
     gap: 4rem;
+
+    @media screen and (max-width: 1024px) {
+        width: 90%;
+        height: 310px;
+    }
+
+    @media screen and (max-width: 568px) {
+        height: 360px;
+    }
 
     &__title {
         display: flex;
@@ -24,7 +34,7 @@
         margin: 20px 0;
 
         &::before {
-            content: url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Classind_A12.svg');
+            content: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/Classind_A14.svg');
             display: inline-block;
             width: 16px;
 
@@ -54,10 +64,20 @@
         align-items: center;
         gap: 10px;
 
+        @media screen and (max-width: 568px) {
+            flex-wrap: wrap;
+        }
+
+
         &-stars {
             cursor: pointer;
             display: inline-block;
-
+            
+        @media screen and (max-width: 568px) {
+            width: 100%;
+            margin-bottom: 0.4rem;
+        }
+            
             button {
                 background: none;
                 background-image: url('/dist/icons/star.svg');
@@ -69,20 +89,38 @@
 
         }
 
+        span {
+            border-left: 1px solid $corTextSegundaria;
+            padding-left: 1rem;
+
+            @media screen and (max-width: 568px) {
+                border-left: none;
+                padding: 0;
+            }
+
+        }
+
         span:nth-child(2)::after {
             content: url('/dist/icons/down-arrow-svgrepo-com.svg');
             margin-left: 10px;
+            
         }
 
-        span::before {
-            content: '|';
-            margin-right: 1rem;
+        @media screen and (max-width: 568px) {
+            span:nth-child(3) {
+                border-left: 1px solid $corTextSegundaria;
+                padding-left: 1rem;
+            }
         }
 
     }
 
     &__text {
         width: 660px;
+
+        @media screen and (max-width: 1024px) {
+            width: 97%;
+        }
 
     }
 
@@ -92,6 +130,10 @@
             margin: 26px 0;
             display: flex;
             
+            @media screen and (max-width: 568px) {
+                flex-wrap: wrap;
+            }
+
         }
 
         &-queue,
@@ -103,18 +145,27 @@
             text-transform: uppercase;
             font-weight: bold;
 
+            @media screen and (max-width: 568px) {
+                padding: 0;
+            }
+
         }
 
         &-queue {
             background: none;
             border: solid 2px $corPrincipal;
             color: $corPrincipal;
-
+            
+            @media screen and (max-width: 568px) {
+                margin-left: 3%;
+                padding: 0 0.5rem;
+            }
 
             &::before {
                 content: url('/dist/icons/bookmark.svg');
                 filter: brightness(0) saturate(100%) invert(65%) sepia(56%) saturate(4894%) hue-rotate(347deg) brightness(99%) contrast(94%);
-                ;
+                
+
             }
 
             &:hover {
@@ -130,6 +181,10 @@
             border: none;
             background: transparent;
             color: $corTextSegundaria;
+
+            @media screen and (max-width: 568px) {
+                margin-top: 1rem;
+            }
 
 
             &::before {
@@ -176,6 +231,8 @@
         }
 
         &-btn {
+            position: absolute;
+            top: 84%;
             color: $corTextSegundaria;
             font-weight: bold;
             text-transform: uppercase;
@@ -183,6 +240,15 @@
             border: none;
             margin: 1rem 0;
             cursor: pointer;
+
+            @media screen and (max-width: 1024px) {
+                top: 71%;
+            }
+
+            @media screen and (max-width: 567px) {
+                top: 110%;
+                
+            }
         }
 
     }
@@ -192,6 +258,10 @@
         padding-left: 2rem;
         display: flex;
         flex-direction: column;
+
+        @media screen and (max-width: 567px) {
+            display: none;
+        }
 
 
         &-btn {
@@ -209,6 +279,11 @@
 
             &::before {
                 content: url('/dist/icons/play.svg');
+            }
+
+            @media screen and (max-width: 568px) {
+                width: 88%;
+                margin-top: 0;
             }
         }
     }
