@@ -5,7 +5,6 @@
     flex-wrap: wrap;
     align-items: center;
     margin: 2rem 0;
-    width: 60%;
     background-color: #000;
     box-shadow: -1px -10px 20px 20px black;
 
@@ -61,22 +60,44 @@
     }
 
     &__lists {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 2rem;
         margin: 2rem 0;
+        width: 80%;
         cursor: pointer;
-        @media screen and (max-width: 1024px) {
-            width: 90%;
+        
+        @media screen and (max-width: 1025px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 567px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
         }
 
 
         &-card {
-            width: 22%;
+            
+            @media screen and (max-width: 567px) {
+                display: flex;
+                gap: 1rem;
+                width: 80%;
+            }
 
             &-cover {
                 width: 100%;
+                @media screen and (max-width:567px) {
+                    width: 40%;
+                }
+            }
+
+            &-text {
+                @media screen and (max-width:567px) {
+                    display: flex;
+                    flex-direction: column;
+                }
             }
 
             &-serie {

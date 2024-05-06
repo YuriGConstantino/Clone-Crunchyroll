@@ -72,12 +72,12 @@
         &-stars {
             cursor: pointer;
             display: inline-block;
-            
-        @media screen and (max-width: 568px) {
-            width: 100%;
-            margin-bottom: 0.4rem;
-        }
-            
+
+            @media screen and (max-width: 568px) {
+                width: 100%;
+                margin-bottom: 0.4rem;
+            }
+
             button {
                 background: none;
                 background-image: url('/dist/icons/star.svg');
@@ -103,7 +103,7 @@
         span:nth-child(2)::after {
             content: url('/dist/icons/down-arrow-svgrepo-com.svg');
             margin-left: 10px;
-            
+
         }
 
         @media screen and (max-width: 568px) {
@@ -129,7 +129,7 @@
         &-buttons {
             margin: 26px 0;
             display: flex;
-            
+
             @media screen and (max-width: 568px) {
                 flex-wrap: wrap;
             }
@@ -155,16 +155,22 @@
             background: none;
             border: solid 2px $corPrincipal;
             color: $corPrincipal;
-            
-            @media screen and (max-width: 568px) {
+
+            @media screen and (max-width: 567px) {
                 margin-left: 3%;
                 padding: 0 0.5rem;
+            }
+
+            &-text {
+                @media screen and (max-width: 567px) {
+                    display: none;
+                }
             }
 
             &::before {
                 content: url('/dist/icons/bookmark.svg');
                 filter: brightness(0) saturate(100%) invert(65%) sepia(56%) saturate(4894%) hue-rotate(347deg) brightness(99%) contrast(94%);
-                
+
 
             }
 
@@ -242,12 +248,12 @@
             cursor: pointer;
 
             @media screen and (max-width: 1024px) {
-                top: 71%;
+                top: 740px;
             }
 
             @media screen and (max-width: 567px) {
-                top: 110%;
-                
+                top: 1024px;
+
             }
         }
 
@@ -285,6 +291,16 @@
                 width: 88%;
                 margin-top: 0;
             }
+
+
         }
+    }
+
+}
+
+.mobile {
+    @media screen and (min-width: 568px) {
+        display: none;
+
     }
 }

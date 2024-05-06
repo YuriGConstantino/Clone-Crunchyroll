@@ -1,9 +1,10 @@
 .banner {
+    display: flex;
+    justify-content: center;
 
     &__container {
         position: absolute;
         width: 890px;
-        left: 25%;
         z-index: 1;
 
         @media screen and (max-width: 1024px) {
@@ -19,7 +20,9 @@
         width: 100%;
 
         @media screen and (max-width: 1024px) {
-            width: 83%;
+            width: 560px;
+            top: -10px;
+            position: relative;
 
         }
 
@@ -29,7 +32,7 @@
 
         &-mobile {
             display: block;
-            width: 81%;
+            width: 368px;
 
             @media screen and (min-width: 568px) {
                 display: none;
@@ -52,7 +55,7 @@
         position: relative;
         opacity: 0.6;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1023px) {
             height: 380px;
         }
 
