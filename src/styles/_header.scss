@@ -5,7 +5,7 @@
     align-items: center;
     width: 100%;
     padding: 0 5rem;
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     color: $corTextPrimaria;
 
@@ -16,70 +16,102 @@
     &__menu {
         &-btn {
             display: none;
+
             @media screen and (max-width:567px) {
                 display: block;
                 margin: 0 1rem;
-                background: url("/dist/icons/menu.svg") transparent no-repeat center ;
+                background: url("/dist/icons/menu.svg") transparent no-repeat center;
                 border: none;
                 width: 50px;
                 height: 50px;
                 cursor: pointer;
-            
+
             }
-            
         }
 
-        &-options {
-            width: 100vw;
-            height: 100vh;
-            background: $corHeader-hover;
-            position: absolute;
-            top: 60px;
+        &-navegate, &-news {
             display: none;
-            
-            &--active {
-                display: block;
-            }
-        }
+            position: absolute;
+            background: $corHeader-hover;
 
-        &-list {
-
-            &-container {
-                border-bottom: 2px solid $corHeader;
-                padding-bottom: 0.5rem;
-                margin-bottom: 0.5rem;
-            }
-
-            &-itens {
-                padding: 1rem ;
+            a {
+                text-decoration: none;
                 color: #F8F8F8;
+
+            }
+            &-itens {
+                list-style: none;
+                padding: 0.5rem 1rem;
+
                 &:hover {
                     background-color: $corHeader;
-                    cursor: pointer;
                 }
+            }
 
-                &:nth-child(1) {
+            &--active {
+                display: flex;
+            }
+        }
+
+        &-navegate {
+            width: 44%;
+            top: 60px;
+            padding: 0.5rem;
+
+            @media screen and (max-width:1024px) {
+                width: 75%;
+            }
+
+
+            &-container {
+                width: 30%;
+            }
+
+
+
+            &-genres {
+                width: 90%;
+                border-left: 2px solid $corHeader;
+
+                &-text {
                     text-transform: uppercase;
                     color: $corTextSegundaria;
+                    padding-left: 1rem;
+                }
+
+                &-container {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    margin-top: 1rem;
+                }
+
+                &-itens {
+                    padding: 0.5rem 1rem;
                     &:hover {
-                        background: none;
-                        cursor: default;
+                        background-color: $corHeader;
                     }
                 }
 
-                &:nth-child(8), &:nth-last-child(1) {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    &::after {
-                        content: url('/dist/icons/chevron-down.svg');
-                        margin-right: 3rem;
-                    }
-
-                }
+            }
 
 
+        }
+
+        &-news {
+            top: 60px;
+            left: 455px;
+            width: 15%;
+
+            &-itens {
+                width: 100%;
+            }
+
+            @media screen and (max-width:1024px) {
+                width: 32%;
+            }
+
+            &--active {
+                display: flex;
             }
         }
     }
@@ -92,13 +124,14 @@
         @media screen and (max-width:567px) {
             display: none;
         }
-        
+
         &:hover {
             filter: brightness(0) saturate(100%) invert(99%) sepia(4%) saturate(440%) hue-rotate(338deg) brightness(118%) contrast(100%);
         }
 
         &--mobile {
             display: none;
+
             @media screen and (max-width:567px) {
                 display: block;
                 width: 10%;
@@ -141,7 +174,7 @@
                 }
             }
 
-            &:nth-child(3) {
+            &:nth-child(4) {
                 &::after {
                     content: url('/dist/icons/down-arrow-svgrepo-com.svg');
                     width: 16px;
@@ -178,6 +211,97 @@
         &-avatar {
             border-radius: 100%;
             width: 30px;
+        }
+    }
+}
+
+.collapse {
+
+    &__menu {
+
+        &-options {
+            width: 100vw;
+            height: 100vh;
+            background: $corHeader-hover;
+            position: absolute;
+            z-index: 2;
+            top: 60px;
+            display: none;
+            overflow-y: scroll;
+            padding-bottom: 4rem;
+
+            &--active {
+                display: block;
+                position: fixed;
+            }
+        }
+
+        &-list {
+            a {
+                text-decoration: none;
+                color: #F8F8F8;
+            }
+
+            &-container {
+                border-bottom: 2px solid $corHeader;
+                padding-bottom: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            &-itens {
+                padding: 1rem;
+
+                &:hover {
+                    background-color: $corHeader;
+                    cursor: pointer;
+                }
+
+                &:nth-child(1) {
+                    text-transform: uppercase;
+                    color: $corTextSegundaria;
+
+                    &:hover {
+                        background: none;
+                        cursor: default;
+                    }
+                }
+
+                &:nth-child(8),
+                &:nth-last-child(2) {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+
+                    &::after {
+                        content: url('/dist/icons/chevron-down.svg');
+                        margin-right: 3rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+        &-sub {
+            display: none;
+            background-color: #4a4e5880;
+
+            &-link {
+                padding: 1rem 2rem;
+
+                &:hover {
+                    background-color: $corHeader;
+                }
+
+            }
+
+            &--active {
+                display: flex;
+                flex-direction: column;
+            }
+
         }
     }
 }
