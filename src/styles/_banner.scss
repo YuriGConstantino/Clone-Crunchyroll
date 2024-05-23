@@ -1,3 +1,5 @@
+@use 'variaveis';
+
 .banner {
     display: flex;
     justify-content: center;
@@ -19,11 +21,15 @@
     &__img {
         width: 100%;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1023px) {
             width: 560px;
             top: -10px;
             position: relative;
 
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 530px;
         }
 
         @media screen and (max-width: 567px) {

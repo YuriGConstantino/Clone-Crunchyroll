@@ -1,5 +1,7 @@
+@use 'variaveis';
+
 .header {
-    background-color: $corHeader;
+    background-color: variaveis.$corHeader;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,17 +9,18 @@
     padding: 0 5rem;
     z-index: 3;
     position: fixed;
-    color: $corTextPrimaria;
+    color: variaveis.$corTextPrimaria;
 
-    @media screen and (max-width: 567px) {
+    @media screen and (max-width: 567px), (max-width: 768px) {
         padding: 0;
     }
 
     &__menu {
+
         &-btn {
             display: none;
 
-            @media screen and (max-width:567px) {
+            @media screen and (max-width:567px), (max-width: 768px) {
                 display: block;
                 margin: 0 1rem;
                 background: url("/dist/icons/menu.svg") transparent no-repeat center;
@@ -25,26 +28,27 @@
                 width: 50px;
                 height: 50px;
                 cursor: pointer;
-
             }
         }
 
-        &-navegate, &-news {
+        &-navegate,
+        &-news {
             display: none;
             position: absolute;
-            background: $corHeader-hover;
+            background: variaveis.$corHeader-hover;
 
             a {
                 text-decoration: none;
                 color: #F8F8F8;
 
             }
+
             &-itens {
                 list-style: none;
                 padding: 0.5rem 1rem;
 
                 &:hover {
-                    background-color: $corHeader;
+                    background-color: variaveis.$corHeader;
                 }
             }
 
@@ -71,11 +75,11 @@
 
             &-genres {
                 width: 90%;
-                border-left: 2px solid $corHeader;
+                border-left: 2px solid variaveis.$corHeader;
 
                 &-text {
                     text-transform: uppercase;
-                    color: $corTextSegundaria;
+                    color: variaveis.$corTextSegundaria;
                     padding-left: 1rem;
                 }
 
@@ -87,8 +91,9 @@
 
                 &-itens {
                     padding: 0.5rem 1rem;
+
                     &:hover {
-                        background-color: $corHeader;
+                        background-color: variaveis.$corHeader;
                     }
                 }
 
@@ -143,7 +148,7 @@
         display: flex;
         align-items: center;
 
-        @media screen and (max-width: 567px) {
+        @media screen and (max-width: 567px), (max-width: 768px) {
             display: none;
         }
 
@@ -162,7 +167,7 @@
 
             &:hover {
                 color: #FFF;
-                background-color: $corHeader-hover;
+                background-color: variaveis.$corHeader-hover;
             }
 
             &:nth-child(1) {
@@ -188,7 +193,7 @@
             padding: 1rem;
 
             &:hover {
-                background-color: $corHeader-hover;
+                background-color: variaveis.$corHeader-hover;
             }
         }
 
@@ -199,7 +204,7 @@
             cursor: pointer;
 
             &:hover {
-                background-color: $corHeader-hover;
+                background-color: variaveis.$corHeader-hover;
             }
 
             &::after {
@@ -222,7 +227,7 @@
         &-options {
             width: 100vw;
             height: 100vh;
-            background: $corHeader-hover;
+            background: variaveis.$corHeader-hover;
             position: absolute;
             z-index: 2;
             top: 60px;
@@ -230,10 +235,19 @@
             overflow-y: scroll;
             padding-bottom: 4rem;
 
+            @media screen and (min-width:768px) {
+                width: 40vw;
+                overflow: hidden;
+            }
+
             &--active {
                 display: block;
                 position: fixed;
+                
             }
+
+
+
         }
 
         &-list {
@@ -243,7 +257,7 @@
             }
 
             &-container {
-                border-bottom: 2px solid $corHeader;
+                border-bottom: 2px solid variaveis.$corHeader;
                 padding-bottom: 0.5rem;
                 margin-bottom: 0.5rem;
             }
@@ -252,13 +266,13 @@
                 padding: 1rem;
 
                 &:hover {
-                    background-color: $corHeader;
+                    background-color: variaveis.$corHeader;
                     cursor: pointer;
                 }
 
                 &:nth-child(1) {
                     text-transform: uppercase;
-                    color: $corTextSegundaria;
+                    color: variaveis.$corTextSegundaria;
 
                     &:hover {
                         background: none;
@@ -292,7 +306,7 @@
                 padding: 1rem 2rem;
 
                 &:hover {
-                    background-color: $corHeader;
+                    background-color: variaveis.$corHeader;
                 }
 
             }

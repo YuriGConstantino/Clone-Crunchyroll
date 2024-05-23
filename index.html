@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <div class="header__menu-container">
-            <button class="header__menu-btn">
+            <button data-menu-btn="menu_btn" class="header__menu-btn">
             </button>
             <h1>
                 <img class="header__logo" src="dist/icons/crunchyroll-seeklogo.svg" alt="crunchyroll">
@@ -19,10 +19,10 @@
                     alt="crunchyroll">
             </h1>
             <div class="header__menu text">
-                <div class="header__menu-itens">
+                <div data-navegate-menu="navegate_menu" class="header__menu-itens">
                     Navegar
                 </div>
-                <div class="header__menu-navegate text-small">
+                <div data-navegate-list="navegate_list" class="header__menu-navegate text-small">
                     <div class="header__menu-navegate-container">
                         <ul class="header__menu-navegate-list">
                             <li class="header__menu-navegate-itens"><a href="">Populares</a></li>
@@ -57,10 +57,10 @@
                 <div class="header__menu-itens">
                     Jogos
                 </div>
-                <div class="header__menu-itens">
+                <div data-news-menu="news_menu" class="header__menu-itens">
                     Notícias
                 </div>
-                <div class="header__menu-news text-small">
+                <div data-news-list="news_list" class="header__menu-news text-small">
                     <div class="header__menu-news-container">
                         <ul class="header__menu-news-list">
                             <li class="header__menu-news-itens"><a href="">Todas as Notícias</a></li>
@@ -69,7 +69,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <div class="header__menu-container">
@@ -80,7 +80,7 @@
             </div>
         </div>
     </header>
-    <div class="collapse__menu-options">
+    <div data-mobile-menu="mobile_menu" class="collapse__menu-options">
         <ul class="collapse__menu-list">
             <div class="collapse__menu-list-container">
                 <li class="collapse__menu-list-itens text-little">Navegar</li>
@@ -95,8 +95,9 @@
                         Lançamentos</a></li>
                 <li class="collapse__menu-list-itens"><a class="collapse__menu-list-itens-link" href="">Videoclipes &
                         Shows</a></li>
-                <li class="collapse__menu-list-itens"><a class="collapse__menu-list-itens-link" href="">Gêneros</a></li>
-                <div class="collapse__menu-sub">
+                <li data-genres-menu="genres_menu" class="collapse__menu-list-itens"><a
+                        class="collapse__menu-list-itens-link" href="">Gêneros</a></li>
+                <div data-genres-list="genres_list" class="collapse__menu-sub">
                     <a class="text-small collapse__menu-sub-link" href="">Ação</a>
                     <a class="text-small collapse__menu-sub-link" href="">Aventura</a>
                     <a class="text-small collapse__menu-sub-link" href="">Comédia</a>
@@ -115,8 +116,9 @@
                 </div>
             </div>
             <li class="collapse__menu-list-itens"><a class="collapse__menu-list-itens-link" href="">Jogos</a></li>
-            <li class="collapse__menu-list-itens"><a class="collapse__menu-list-itens-link" href="">Notícias</a></li>
-            <div class="collapse__menu-sub">
+            <li data-news-menu-mobile="news_menu_mobile" class="collapse__menu-list-itens"><a
+                    class="collapse__menu-list-itens-link" href="">Notícias</a></li>
+            <div data-news-list-mobile="news_list_mobile" class="collapse__menu-sub">
                 <a class="text-small collapse__menu-sub-link" href="">Todas as Notícias</a>
                 <a class="text-small collapse__menu-sub-link" href="">Anime Awards</a>
                 <a class="text-small collapse__menu-sub-link" href="">Eventos & Experiências</a>
@@ -130,9 +132,8 @@
                 <img class="banner__img banner__img-mobile" src="dist/images/frieren-banner-mobile.jpg" alt="">
             </div>
         </section>
-
         <div class="container">
-            <section class="description">
+            <section data-description="description" class="description">
                 <div>
                     <div class="description__title">
                         <h2 class="description__title-text text-big">
@@ -212,7 +213,7 @@
                                 <h5 class="text">Classificação de Conteúdo</h5>
                                 <div class="description__details-ratings">
                                     <h5 class="text-small">
-                                        A12
+                                        A14
                                     </h5>
                                     <h5 class="text-small">
                                         Drogas Lícitas, Violência Fantasiosa
@@ -221,7 +222,9 @@
                             </div>
                         </div>
                     </div>
-                    <button class="description__details-btn text-little">Menos Detalhes</button>
+                    <button data-description-btn="description_btn" class="description__details-btn text-little">
+                        Mais Detalhes
+                    </button>
                 </div>
                 <div class="description__next-ep">
                     <img class="description__next-ep-img" src="dist/images/ep1.jpg" alt="">
@@ -231,113 +234,10 @@
             <section class="episodes">
                 <div class="episodes__season">
                     <h4>S1: Frieren e a Jornada para o Além</h4>
-                    <button class="episodes__season-btn text-small">Mais Antigos</button>
+                    <button data-season-btn="season_btn" class="episodes__season-btn text-small">Mais Antigos</button>
                 </div>
-                <div class="episodes__lists">
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
-                    <div class="episodes__lists-card">
-                        <img class="episodes__lists-card-cover" src="dist/images/ep1.jpg" alt="">
-                        <div class="episodes__lists-card-text">
-                            <h3 class="episodes__lists-card-serie text-little">Frieren e a Jornada para o Além</h3>
-                            <h4 class="episodes__lists-card-title text">S-1 E-1 - O fim da aventura</h4>
-                            <span class="episodes__lists-card-language text-small">Dub | Leg</span>
-                        </div>
-                    </div>
+                <div data-episodes="episodes" class="episodes__lists">
+                    
                 </div>
 
             </section>
@@ -396,8 +296,9 @@
                 </div>
             </footer>
         </div>
-
     </main>
+
+    <script src="src/scripts/main.js"></script>
 </body>
 
 </html>

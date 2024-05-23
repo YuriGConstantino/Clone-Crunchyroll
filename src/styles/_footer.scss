@@ -1,3 +1,5 @@
+@use 'variaveis';
+
 .footer {
 
     display: flex;
@@ -32,6 +34,14 @@
 
         }
 
+        @media screen and (max-width:768px) {
+            justify-content: space-between;
+            &-account {
+                display: none;
+            }
+        }
+
+
     }
 
     &__title {
@@ -41,7 +51,7 @@
 
     &__list {
         list-style: none;
-        color: $corTextSegundaria;
+        color: variaveis.$corTextSegundaria;
         margin-bottom: 1rem;
 
         @media screen and (max-width: 567px) {
@@ -73,7 +83,7 @@
         width: 100%;
         margin-top: 1rem;
         margin-bottom: 3rem;
-        color: $corTextSegundaria;
+        color: variaveis.$corTextSegundaria;
 
         @media screen and (max-width:567px) {
             display: flex;
@@ -93,7 +103,7 @@
         }
 
         &-text {
-            border-left: 2px solid $corTextSegundaria;
+            border-left: 2px solid variaveis.$corTextSegundaria;
             padding-left: 0.5rem;
 
             @media screen and (max-width:567px) {
@@ -106,7 +116,7 @@
         &-btn {
             background-color: transparent;
             border: none;
-            color: $corTextSegundaria;
+            color: variaveis.$corTextSegundaria;
             font-weight: 700;
             text-transform: uppercase;
             cursor: pointer;
