@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     }
-
-    // lista de elementos e botões
+    // btns list
     const menus = [
         menuMobile = {
             buttonSelector: '[data-menu-btn]',
@@ -42,30 +41,25 @@ document.addEventListener("DOMContentLoaded", function () {
             activeClass: 'header__menu-navegate--active'
         },
 
-
         menuDescriptionBtn = {
             buttonSelector: '[data-description-btn]',
             menuSelector: '[data-description]',
             activeClass: 'description--active'
         },
 
-
         menuDescription = {
-            buttonSelector: '[data-description]',
+            buttonSelector: '[data-description-btn]',
             menuSelector: '[data-description-btn]',
             activeClass: 'description__details-btn--active'
         },
 
     ]
-
-    //cria repeticao da function para os menus
+    //function menus interaction
     for (let i = 0; i < menus.length; i++) {
         toggleMenu(menus[i].buttonSelector, menus[i].menuSelector, menus[i].activeClass)
 
     }
-
-
-    // function para trocar texto de alguns botões
+    // function replacement btn text
     function toggleText(elementSelector, newText) {
         const element = document.querySelector(elementSelector);
         const originalText = element.textContent;
@@ -81,8 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     toggleText('[data-description-btn]', 'Menos detalhes')
     toggleText('[data-season-btn]', "Mais Recentes")
-
-    //Function para a lista de eps
+    //Function create eps card list
     const episodesList = [
         {
             episode: '1',
@@ -199,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     ]
 
-    function createCard({episode, title}) {
+    function createCard({ episode, title }) {
         const card = document.createElement('div')
         card.classList.add('episodes__lists-card')
 
@@ -249,6 +242,55 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     addCardToContainer('[data-episodes]', episodesList)
+    // inverte a lista de eps
+    const reverseListEpBtn = document.querySelector('[data-season-btn]')
+
+    reverseListEpBtn.addEventListener('click', () => {
+
+        let epsContainer = document.querySelector('[data-episodes]')
+
+        let arrayList = Array.from(epsContainer.children)
+
+        arrayList.reverse()
+
+        epsContainer.innerHTML = ''
+
+        arrayList.forEach((item) => {
+            epsContainer.appendChild(item)
+        })
+
+    })
+
+
+    const stars = document.querySelectorAll('[data-rate-star]')
+    let currentRating = 0
+
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            currentRating = star.getAttribute('data-value')
+            updateStars(currentRating)
+        });
+
+        star.addEventListener('mouseover', () => {
+            updateStars(star.getAttribute('data-value'))
+        });
+
+        star.addEventListener('mouseout', () => {
+            updateStars(currentRating)
+        });
+    });
+
+    function updateStars(rating) {
+        stars.forEach(star => {
+            if (star.getAttribute('data-value') <= rating) {
+                star.classList.add('description__rate-stars-icon--active')
+            } else {
+                star.classList.remove('description__rate-stars-icon--active')
+            }
+        })
+    }
+
+
 
 })
 

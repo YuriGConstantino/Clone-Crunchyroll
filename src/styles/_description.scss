@@ -90,18 +90,18 @@
                 margin-bottom: 0.4rem;
             }
 
-            button {
-                background: none;
-                background-image: url('/dist/icons/star.svg');
-                border: none;
-                width: 24px;
-                height: 23px;
-                cursor: pointer;
+            &-icon {
+                font-size: 32px;
+
+                &--active {
+                    color: variaveis.$corPrincipal;
+                }
+
             }
 
         }
 
-        span {
+        &-average {
             border-left: 1px solid variaveis.$corTextSegundaria;
             padding-left: 1rem;
 
@@ -112,14 +112,14 @@
 
         }
 
-        span:nth-child(2)::after {
+        &-average:nth-child(2)::after {
             content: url('/dist/icons/down-arrow-svgrepo-com.svg');
             margin-left: 10px;
 
         }
 
         @media screen and (max-width: 568px) {
-            span:nth-child(3) {
+            &-reviews:nth-child(3) {
                 border-left: 1px solid variaveis.$corTextSegundaria;
                 padding-left: 1rem;
             }
@@ -210,6 +210,7 @@
             border: none;
             background: transparent;
             color: variaveis.$corTextSegundaria;
+            cursor: pointer;
 
             @media screen and (max-width: 568px) {
                 margin-top: 1rem;
@@ -217,9 +218,12 @@
                 right: 140px;
             }
 
-
             &::before {
                 content: url('/dist/icons/plus.svg');
+            }
+
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(6861%) hue-rotate(195deg) brightness(83%) contrast(84%);
             }
 
         }
@@ -264,7 +268,7 @@
 
         &-btn {
             position: absolute;
-            top: 84%;
+            top: 825px;
             color: variaveis.$corTextSegundaria;
             font-weight: bold;
             text-transform: uppercase;
@@ -274,13 +278,13 @@
             cursor: pointer;
 
             &--active {
-                top: 1320px;
+                top: 1340px;
             }
 
             @media screen and (max-width: 1024px) {
-                top: 850px;
+                top: 860px;
                 &--active {
-                    top: 1515px;
+                    top: 1530px;
                 }
             }
 
@@ -295,11 +299,14 @@
                 top: 1024px;
 
                 &--active {
-                    top: 1670px;
+                    top: 1675px;
                 }
                 
             }
 
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(6861%) hue-rotate(195deg) brightness(83%) contrast(84%);
+            }
 
         }
 

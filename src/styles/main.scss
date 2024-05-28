@@ -43,7 +43,7 @@ body {
     @include text(34px);
     font-family: "Lato", sans-serif;
 
-    @media screen and (max-width: 567px) {
+    @media screen and (max-width: 568px) {
         @include text(24px);
     }
 }

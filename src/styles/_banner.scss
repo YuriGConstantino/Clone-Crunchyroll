@@ -32,18 +32,17 @@
             width: 530px;
         }
 
-        @media screen and (max-width: 567px) {
+        @media screen and (max-width: 568px) {
             display: none;
         }
 
         &-mobile {
-            display: block;
-            width: 368px;
+            display: none;
 
-            @media screen and (min-width: 568px) {
-                display: none;
+            @media screen and (max-width: 568px) {
+                display: block;
+                width: 368px;
             }
-
         }
 
     }
@@ -69,7 +68,7 @@
             background-image: url('/dist/images/frieren-banner-mobile.jpg')
         }
 
-        @media screen and (max-width: 567px) {
+        @media screen and (max-width: 568px) {
             height: 604px;
         }
 

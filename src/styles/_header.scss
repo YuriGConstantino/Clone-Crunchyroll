@@ -11,7 +11,7 @@
     position: fixed;
     color: variaveis.$corTextPrimaria;
 
-    @media screen and (max-width: 567px), (max-width: 768px) {
+    @media screen and (max-width: 568px), (max-width: 768px) {
         padding: 0;
     }
 
@@ -20,7 +20,7 @@
         &-btn {
             display: none;
 
-            @media screen and (max-width:567px), (max-width: 768px) {
+            @media screen and (max-width:568px), (max-width: 768px) {
                 display: block;
                 margin: 0 1rem;
                 background: url("/dist/icons/menu.svg") transparent no-repeat center;
@@ -126,7 +126,7 @@
         margin-right: 3rem;
         cursor: pointer;
 
-        @media screen and (max-width:567px) {
+        @media screen and (max-width:568px) {
             display: none;
         }
 
@@ -137,7 +137,7 @@
         &--mobile {
             display: none;
 
-            @media screen and (max-width:567px) {
+            @media screen and (max-width:568px) {
                 display: block;
                 width: 10%;
             }
@@ -148,7 +148,7 @@
         display: flex;
         align-items: center;
 
-        @media screen and (max-width: 567px), (max-width: 768px) {
+        @media screen and (max-width: 568px), (max-width: 768px) {
             display: none;
         }
 

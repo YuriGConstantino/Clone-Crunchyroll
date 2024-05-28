@@ -14,7 +14,7 @@
         justify-content: space-evenly;
         border-bottom: 1px solid #4a4e58;
 
-        @media screen and (max-width:567px) {
+        @media screen and (max-width:568px) {
             display: flex;
             flex-direction: column;
         }
@@ -26,7 +26,7 @@
             display: flex;
             flex-direction: column;
 
-            @media screen and (max-width:567px) {
+            @media screen and (max-width:568px) {
                 flex-direction: row;
                 justify-content: space-between;
                 margin: 1rem 0;
@@ -54,12 +54,12 @@
         color: variaveis.$corTextSegundaria;
         margin-bottom: 1rem;
 
-        @media screen and (max-width: 567px) {
+        @media screen and (max-width: 568px) {
             width: 40%;
         }
 
         &:nth-child(1) {
-            @media screen and (max-width:567px) {
+            @media screen and (max-width:568px) {
                 width: 80%;
             }
         }
@@ -85,7 +85,7 @@
         margin-bottom: 3rem;
         color: variaveis.$corTextSegundaria;
 
-        @media screen and (max-width:567px) {
+        @media screen and (max-width:568px) {
             display: flex;
             flex-direction: column;
         }
@@ -94,7 +94,7 @@
             width: 158px;
             margin-right: 0.3rem;
 
-            @media screen and (max-width:567px) {
+            @media screen and (max-width:568px) {
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 0.7rem;
@@ -106,7 +106,7 @@
             border-left: 2px solid variaveis.$corTextSegundaria;
             padding-left: 0.5rem;
 
-            @media screen and (max-width:567px) {
+            @media screen and (max-width:568px) {
                 border: none;
                 margin-top: 1rem;
             }
@@ -137,7 +137,7 @@
                 }
             }
 
-            @media screen and (max-width:567px) {
+            @media screen and (max-width:568px) {
                 margin-top: 1rem;
             }
 
