@@ -4,6 +4,10 @@
     display: flex;
     justify-content: center;
 
+    @media screen and (max-width: 500px) {
+        display: block;
+    }
+
     &__container {
         position: absolute;
         width: 890px;
@@ -15,6 +19,11 @@
             width: 80%;
             left: 10%;
             top: 6%;
+        }
+
+        @media screen and (max-width: 500px) {
+            left: 15%;
+            
         }
     }
 
@@ -70,6 +79,7 @@
 
         @media screen and (max-width: 568px) {
             height: 604px;
+            width: 110%;
         }
 
     }
