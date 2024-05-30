@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             episode: '28',
-            title: 'Seria contrangedor quando nos encontrarmos novamente'
+            title: 'Seria contrangedor quando...'
         }
 
     ]
@@ -211,7 +211,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const h4 = document.createElement('h4')
         h4.classList.add('episodes__lists-card-title')
-        h4.classList.add('text')
         h4.textContent = `S-1 E-${episode} - ${title}`
 
         const span = document.createElement('span')

@@ -10,12 +10,17 @@
 
     @media screen and (max-width: 1024px) {
         width: 90%;
-        height: 310px;
+        height: 340px;
 
     }
 
     @media screen and (max-width: 568px) {
-        height: 360px;
+        height: 380px;
+    
+    }
+
+    @media screen and (max-width: 384px) {
+        height: 395px;
     
     }
 
@@ -214,8 +219,13 @@
 
             @media screen and (max-width: 568px) {
                 margin-top: 1rem;
+                margin-left: 110px;
                 position: relative;
                 right: 140px;
+            }
+
+            @media screen and (max-width: 568px) {
+                right: 118px;
             }
 
             &::before {
@@ -278,31 +288,41 @@
             cursor: pointer;
 
             &--active {
-                top: 1340px;
+                position: relative;
+                top: 0;
             }
 
             @media screen and (max-width: 1024px) {
-                top: 860px;
+                top: 890px;
                 &--active {
-                    top: 1530px;
+                    top: 0px;
                 }
             }
 
             @media screen and (max-width: 768px) {
-                top: 690px;
+                top: 713px;
                 &--active {
-                    top: 1190px;
+                    top: 0;
                 }
             }
 
             @media screen and (max-width: 568px) {
-                top: 1024px;
+                top: 1035px;
 
                 &--active {
-                    top: 1675px;
+                    top: 0;
                 }
                 
             }
+
+            @media screen and (max-width: 384px) {
+                top: 1040px;
+
+                &--active {
+                    top: 0;
+                }
+            }
+    
 
             &:hover {
                 filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(6861%) hue-rotate(195deg) brightness(83%) contrast(84%);
@@ -345,7 +365,12 @@
             }
 
             @media screen and (max-width: 568px) {
-                width: 88%;
+                width: 85%;
+                margin-top: 0;
+            }
+
+            @media screen and (max-width: 384px) {
+                width: 80%;
                 margin-top: 0;
             }
 
